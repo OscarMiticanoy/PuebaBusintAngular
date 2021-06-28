@@ -1,0 +1,21 @@
+<h1>Listado de PeLiculas</h1>
+
+<div class="container mat-elevation-z8">
+
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>TITULO</th>
+        <th>INFORMACION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of dataSource">
+        <td>{{ data.id }}</td>
+        <td>{{ data.title }}</td>
+        <td>{{ data.overview }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
